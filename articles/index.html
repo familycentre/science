@@ -9,6 +9,10 @@
           var gotohref = "https://familycentre.github.io/science/article/" + "?rg=" + isoregion;
           window.location.href = gotohref;
        }
+       var searchterm = document.getElementById("searchterm");
+	    function searchpub(){
+		var winloc = "https://pubmed.ncbi.nlm.nih.gov/?term=" + searchterm;
+	    }
     </script>
     <style>
       .shuzhou {
@@ -23,5 +27,6 @@
         Change Region
       </button>
     </a>
+    <input type = "text" placeholder = "Search PubMed" id = "searchterm"/><input type = "submit" value = "Search" onclick = "searchpub()"/>
 </body>
 </html>
