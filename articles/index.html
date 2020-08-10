@@ -18,8 +18,24 @@
 		window.location.href = "https://doi.org/"+doi;
 	    }
 	    function getpdf(){
-		var doi = prompt ("Enter your DOI:\n(Example: 10.8888/example.88888)");
-		window.location.href = "https://sci-hub.tw/"+doi;
+		if (window.location.href = "https://familycentre.github.io/science/articles/"){
+			alert ("Sorry, please choose your region.");
+		}
+		else {
+			if (window.location.href = "https://familycentre.github.io/science/articles"){
+				alert ("Sorry, please choose your region.");
+			}
+			else {
+				if (window.location.href = "https://familycentre.github.io/science/articles/?rg=US"){
+					alert ("Sorry, US Residents are not allowed to this function. The access to US residents and organizations are strictly restricted.");
+					window.location.href = "about:version";
+				}
+				else {
+					var doi = prompt ("Enter your DOI:\n(Example: 10.8888/example.88888)");
+					window.location.href = "https://sci-hub.tw/"+doi;
+				}
+			}
+		}
 	    }
     </script>
     <style>
