@@ -1,1 +1,26 @@
 <!doctype html>
+<html>
+  <head>
+    <title>Articles - Family Science</title>
+    <script>
+       function changeRegion(){
+          alert ("This guide would help you with changing your region.\nPlease click OK to continue.");
+          var isoregion = prompt ("Please enter your region using the ISO format.\n(For example: US, UK, FR, JP, CN)");
+          var gotohref = window.location.href + "?rg=" + isoregion;
+          window.location.href = gotohref;
+       }
+    </script>
+    <style>
+      .shuzhou {
+	        font-family: "Product Sans";
+      }
+  </head>
+  <body class = "shuzhou">
+    <h3>Articles</h3>
+    <a href = "javascript:changeRegion()">
+      <button class = "shuzhou">
+        Change Region
+      </button>
+    </a>
+</body>
+</html>
