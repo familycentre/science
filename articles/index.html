@@ -6,12 +6,20 @@
        function changeRegion(){
           alert ("This guide would help you with changing your region.\nPlease click OK to continue.");
           var isoregion = prompt ("Please enter your region using the ISO format.\n(For example: US, UK, FR, JP, CN)");
-          var gotohref = "https://familycentre.github.io/science/article/" + "?rg=" + isoregion;
+          var gotohref = "https://familycentre.github.io/science/articles/" + "?rg=" + isoregion;
           window.location.href = gotohref;
        }
-       var searchterm = document.getElementById("searchterm").value;
 	    function searchpub(){
-		var winloc = "https://pubmed.ncbi.nlm.nih.gov/?term=" + searchterm;
+		var searchterm = prompt ("Enter your search term:");
+		var winloc = "https://pubmed.ncbi.nlm.nih.gov/?term="+searchterm;
+	    }
+	    function searchdoi(){
+		var doi = prompt ("Enter your DOI:\n(Example: 10.8888/example.88888)");
+		window.location.href = "https://doi.org/"+doi;
+	    }
+	    function getpdf(){
+		var doi = prompt ("Enter your DOI:\n(Example: 10.8888/example.88888)");
+		window.location.href = "https://sci-hub.tw/"+doi;
 	    }
     </script>
     <style>
@@ -27,8 +35,20 @@
         Change Region
       </button>
     </a>
-	  <br>
-    <input type = "text" placeholder = "Search PubMed" id = "searchterm" name = "searchterm" class = "shuzhou"/>
-    <input type = "submit" value = "Search" onclick = "searchpub()" class = "shuzhou"/>
+    <a href = "javascript:searchpub()">
+      <button class = "shuzhou">
+        Search PubMed
+      </button>
+    </a>
+    <a href = "javascript:searchdoi()">
+      <button class = "shuzhou">
+        Search DOI
+      </button>
+    </a>
+    <a href = "javascript:getpdf()">
+      <button class = "shuzhou">
+        Get PDF by DOI
+      </button>
+    </a>
 </body>
 </html>
