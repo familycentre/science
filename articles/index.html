@@ -11,7 +11,7 @@
        }
 	    function searchpub(){
 		var searchterm = prompt ("Enter your search term:");
-		var winloc = "https://pubmed.ncbi.nlm.nih.gov/?term="+searchterm;
+		window.location.href = "https://pubmed.ncbi.nlm.nih.gov/?term="+searchterm;
 	    }
 	    function searchdoi(){
 		var doi = prompt ("Enter your DOI:\n(Example: 10.8888/example.88888)");
